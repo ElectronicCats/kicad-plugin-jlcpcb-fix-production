@@ -1,0 +1,25 @@
+{
+    "$schema": "https://go.kicad.org/pcm/schemas/v1",
+    "name": "Export EasyEDA-compatible copy",
+    "description": "Exports the board in KiCad 8 syntax so EasyEDA Pro imports it with the routing intact (needed for JLCPCB full-color silkscreen).",
+    "description_full": "KiCad 10 removed the numbered net table from .kicad_pcb files: tracks, vias, zones and pads now reference nets by name instead of by number. The EasyEDA Pro importer expects the numbered form and silently drops all routing when importing KiCad 9/10 boards. This plugin adds a one-click export that rewrites the saved board into KiCad 8 syntax (rebuilt net table, v8 layer numbering, v10-only tokens stripped) and produces a zip ready to import in EasyEDA Pro — footprints AND routing. Typical use case: ordering JLCPCB full-color silkscreen, which only accepts fabrication files exported from EasyEDA Pro.",
+    "identifier": "com.github.electroniccats.kicad-plugin-jlcpcb-fix-production",
+    "type": "plugin",
+    "author": {
+        "name": "Electronic Cats",
+        "contact": {
+            "web": "https://electroniccats.com"
+        }
+    },
+    "license": "MIT",
+    "resources": {
+        "homepage": "https://github.com/ElectronicCats/kicad-plugin-jlcpcb-fix-production"
+    },
+    "versions": [
+        {
+            "version": "1.0.0",
+            "status": "stable",
+            "kicad_version": "8.0"
+        }
+    ]
+}

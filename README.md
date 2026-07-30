@@ -64,6 +64,16 @@ differs in form, not geometry).
 
 ## Installation
 
+### Via the Plugin and Content Manager (recommended)
+
+1. Download the `*-pcm.zip` from the [latest release](https://github.com/ElectronicCats/kicad-plugin-jlcpcb-fix-production/releases).
+2. In KiCad: **Tools → Plugin and Content Manager → Install from File…** and
+   pick the zip.
+
+To build the zip yourself: `python3 make_pcm_package.py` (output in `dist/`).
+
+### Manual
+
 Clone this repository into your KiCad plugins directory:
 
 - **Linux:** `~/.local/share/kicad/<version>/scripting/plugins/`
